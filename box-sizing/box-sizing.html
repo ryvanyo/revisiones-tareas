@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Box Sizing</title>
+	<style type="text/css">
+		.container p{
+			float: left;
+			width: 50%;
+			background-color: yellow;
+			box-sizing: border-box;
+		}
+		.container .left{
+			padding-right: 1em;
+		}
+		.container .right{
+			padding-left: 1em;
+		}
+	</style>
+</head>
+<body>
+	<h1>Matemática Discreta</h1>
+	<div class="container">
+		<p class="left">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat.
+		</p>
+		<p class="right">
+			Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<div style="clear: both"></div>
+	</div>
+
+	<style type="text/css">
+		.caja-1{
+			background-color: pink;
+			width: 300px;
+			padding: 0 20px;
+		}
+		.caja-2{
+			background-color: orange;
+			width: 300px;
+			padding: 0 20px;
+			box-sizing: border-box;
+		}
+	</style>
+	<div class="caja-1">
+		width: 300px;<br>
+		padding: 0 20px;<br>
+		box-sizing: content-box;
+	</div>
+	<div class="caja-2">
+		width: 300px;<br>
+		padding: 0 20px;<br>
+		box-sizing: border-box;
+	</div>
+</body>
+</html>
