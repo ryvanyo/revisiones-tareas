@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Variables en Javasript</title>
+</head>
+<body>
+  <h1>
+    Variables
+  </h1>
+  <p>
+    No es necesario <strong>declarar</strong> variables en Javascript.
+  </p>
+  <p>
+    Se pueden usar directamente:
+  </p>
+  <pre>
+    a = 25;
+    b = 33;
+  </pre>
+  <p>
+    Se puede usar la palabra reservada <code><strong>var</strong></code> para declarar variables.
+  </p>
+  <pre>
+    var conta = 21;
+    var factor = 10;
+  </pre>
+  <p>
+    ¿Cuál es la diferencia? <strong>El ámbito</strong>
+  </p>
+  <p>
+    Sin <code><strong>var</strong></code> cualquier variable es global.<br>
+    Con <code><strong>var</strong></code> se declaran variables locales que serán visibles sólo en el ámbito donde son declaradas.
+  </p>
+  <p>¿Qué es un ámbito?</p>
+  <script>
+    conta = 1;
+
+    function aumentar(veces){
+      return conta * veces;
+    }
+
+    function sumar(a, b, flag){
+      var resultado = a + b;
+
+      function multiplicar(x, y){
+        resultado = x * y;
+        return resultado;
+      }
+
+      if (flag=="multiplicar") {
+        return multiplicar(a, b);
+      }
+      return resultado;
+    }
+  </script>
+</body>
+</html>
